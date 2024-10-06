@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+       <!-- AOS (Animate on Scroll) CSS -->
+       <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* You can add custom styles here if needed */
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="lo.jpeg" alt="your logo" style="width: 150px; height: auto;">
+            </a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="nav-links mx-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">References</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Apply</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="btn btn-blur" onclick="window.location.href='index.html'">Login</button>
+                </div>
+            </div>
+        </nav>
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="Nasa.jpeg" alt="Nasa Space Apps">
+                    <div class="content">
+                        <div class="title">Mapping Greenhouse Gases</div>
+                        <div class="type">NASA SPACE APPS</div>
+                        <div class="description">
+                            Our project utilizes satellite and model-based datasets to map human-caused and natural greenhouse gas emissions, providing insights into how they contribute to global climate change. Through advanced analysis, we are building a comprehensive understanding of local emissions and their broader impact on the planet.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img src="nasaa.jpeg" alt="Nasa Satellite">
+                    <div class="content">
+                        <div class="title">Data Sources</div>
+                        <div class="type">NASA SATELLITE + MODELS</div>
+                        <div class="description">
+                            Combining NASA’s satellite data from OCO-2 and model-based sources like the Global Carbon Atlas, our project maps emissions from both human activities and natural processes. This rich dataset allows us to identify emission hotspots and key sinks for greenhouse gases in our region.
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <img src="Emission.jpeg" alt="Emissions Source">
+                    <div class="content">
+                        <div class="title">Human-Caused Emissions</div>
+                        <div class="type">EMISSION SOURCES</div>
+                        <div class="description">
+                            By analyzing urban infrastructure and transportation networks, we identified significant human-caused emissions contributing to the local carbon footprint. Our project focuses on visualizing these patterns, helping policymakers make informed decisions for emission reduction strategies.
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <img src="Natural.jpeg" alt="Natural System">
+                    <div class="content">
+                        <div class="title">Natural Emission Sinks</div>
+                        <div class="type">NATURAL SYSTEMS</div>
+                        <div class="description">
+                            Forests, oceans, and urban parks act as natural sinks for greenhouse gases, absorbing CO2 and reducing net emissions. Our project highlights these critical areas, emphasizing the importance of preserving and expanding green spaces to mitigate climate change.
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <img src="feature.jpeg" alt="Future Actions">
+                    <div class="content">
+                        <div class="title">Future Actions</div>
+                        <div class="type">POLICY & CITIZEN ACTION</div>
+                        <div class="description">
+                            The insights from our project pave the way for climate action, empowering both policymakers and local communities to take informed steps in reducing greenhouse gas emissions. Together, we aim to create a sustainable future by addressing emissions at the neighborhood level.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="nextPrevArrows">
+                <button class="prev"> < </button>
+                <button class="next"> > </button>
+            </div>
+        </div>
+                <button class="prev"> < </button>
+                <button class="next"> > </button>
+            </div>
+        </div>
+    </header>
+    <style>
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+   /* About Section Styling */
+.about-section {
+    background-color: #F5F5F5; /* Light Gray background */
+    padding: 40px 20px; /* Padding around the content */
+}
+
+.container {
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center container */
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    align-items: center;
+    gap: 20px; /* Space between text and image */
+}
+h2 {
+    color: #2979FF; /* Electric Blue color */
+    font-family: "Font Awesome 5 Free"; /* or any font of your choice */
+    margin-bottom: 20px; /* Space below heading */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '➔'; /* Arrow mark after heading */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #2979FF; /* Matching Electric Blue color */
+    font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.text-content {
+    flex: 1; /* Allow text to take available space */
+}
+/* Paragraph Styling */
+p {
+    color: #4E4E4E; /* Charcoal Gray text color */
+    font-family: 'Arial', sans-serif; /* or any font of your choice */
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 20px; /* Space between paragraphs */
+    font-size: 1rem; /* Base font size (16px) */
+    font-weight: 400; /* Normal weight (400) */
+}
+
+/* Optional: Larger Font Size for More Emphasis */
+p.large-text {
+    font-size: 1.2rem; /* Larger font size (19px) */
+}
+
+/* Optional: Bold Font Weight for Emphasis */
+p.bold-text {
+    font-weight: 700; /* Bold weight (700) */
+}
+
+
+.image-content {
+    flex: 1; /* Allow image to take available space */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+}
+
+.image-content img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+}
+/* Image Content */
+.image-content {
+    flex: 1; /* Allow image to take available space */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically if needed */
+    max-width: 500px; /* Increase max width for larger images */
+    max-height: 400px; /* Increase max height for larger images */
+    overflow: hidden; /* Prevent overflow of the image */
+}
+
+.image-content img {
+    width: 100%; /* Set width to 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image takes the full width of its container */
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+}
+
+/* Optional: Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack text and image vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .image-content {
+        max-width: 100%; /* Allow full width on smaller screens */
+        max-height: none; /* Remove max-height on mobile if desired */
+    }
+
+    .image-content img {
+        width: 100%; /* Adjust to full width on smaller screens */
+        height: auto; /* Maintain aspect ratio on mobile */
+    }
+}
+
+
+/* Optional: Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack text and image vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+}
+
+
+        
+        /* Service cards */
+        .service-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            width: 240px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f0f0f0; /* Light grey background on hover */
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-content i {
+            color: #333;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .card:hover .card-content i {
+            color: #007bff; /* Change icon color on hover */
+        }
+        
+        .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            font-weight: 600; /* Semi-bold font */
+            color: #333;
+            font-family: 'Poppins', sans-serif; /* Ensure the font style is applied */
+        }
+        h3 {
+            color: #007BFF; /* Change to your desired color */
+        }
+        
+        li strong {
+            color: #FF5722; /* Change to your desired color */
+        }
+        li {
+            color: #333333; /* Change this to your desired color */
+        }
+        
+        
+        
+        .card-content p {
+            margin: 0;
+            color: #777;
+            font-family: 'Poppins', sans-serif; /* Ensure the font style is applied */
+        }
+        .footer h4 {
+            color: rgb(255, 255, 255); /* White color for the h4 elements */
+            font-size: 18px; /* Adjust the size as needed */
+        }
+        
+        .footer p {
+            color: rgb(255, 255, 255); /* White color for the p elements */
+            font-size: 14px; /* Adjust the size as needed */
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+
+
+        
+        /* Service cards */
+        .service-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            width: 240px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f0f0f0; /* Light grey background on hover */
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-content i {
+            color: #333;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .card:hover .card-content i {
+            color: #007bff; /* Change icon color on hover */
+        }
+        
+        .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            font-weight: 600; /* Semi-bold font */
+            color: #333;
+            font-family: 'Poppins', sans-serif; /* Ensure the font style is applied */
+        }
+        
+        .card-content p {
+            margin: 0;
+            color: #777;
+            font-family: 'Poppins', sans-serif; /* Ensure the font style is applied */
+        }
+        
+        
+
+        
+        /* Section Title Styling */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            position: absolute;
+            content: "";
+            background: var(--primary);
+            z-index: -1;
+        }
+
+        .section-title::before {
+            width: calc(100% + 80px);
+            height: 2px;
+            top: 4px;
+            left: -40px;
+        }
+
+        .section-title::after {
+            width: calc(100% + 120px);
+            height: 2px;
+            bottom: 5px;
+            left: -60px;
+        }
+
+        /* Service Section Styling */
+        .service-item {
+            background: var(--light);
+            transition: 0.5s;
+        }
+
+        .service-item:hover {
+            margin-top: -10px;
+            background: var(--primary);
+        }
+
+        .service-item * {
+            transition: 0.5s;
+        }
+
+        .service-item:hover * {
+            color: var(--light) !important;
+        }
+        h1.mb-5 {
+            color: #000000; /* Black color (adjust as needed) */
+            font-family: 'Arial', sans-serif; /* or any font of your choice */
+            margin-bottom: 40px; /* Margin-bottom from the class mb-5 */
+        }
+        .footer h4 {
+            color: rgb(255, 255, 255); /* White color for the h4 elements */
+            font-size: 18px; /* Adjust the size as needed */
+        }
+        
+        .footer p {
+            color: rgb(255, 255, 255); /* White color for the p elements */
+            font-size: 14px; /* Adjust the size as needed */
+        }
+        
+    </style>
+
+    <section class="about-section" data-aos="fade-left" data-aos-duration="1500">
+        <div class="container">
+            <div class="about-content">
+                <div class="text-content">
+                    <h2>NASA Project: Uncover the Role of Greenhouse Gases in Your Neighborhood!</h2>
+                    <p>This innovative project aims to explore and understand the impact of greenhouse gases (GHGs) in our local environments. By leveraging the expertise of the National Oceanic and Atmospheric Administration (NOAA), we aim to provide effective and actionable climate monitoring solutions. The primary goal is to raise awareness and promote informed decision-making at the community level regarding greenhouse gas emissions and their effects on climate change.</p>
+                    
+                    <h3>A Colorful Story of Methane's Rise</h3>
+                    <p>Methane (CH₄) is a potent greenhouse gas known for its significant warming potential, which is over 25 times that of carbon dioxide (CO₂) over a 100-year period. The rise of methane concentrations in the atmosphere is largely attributed to human activities such as agriculture, fossil fuel extraction, and waste management. Understanding the sources, behavior, and impacts of methane is crucial for effective climate action. This project aims to shed light on how local sources contribute to global warming and how communities can take steps to mitigate these emissions.</p>
+                    <div class="image-content">
+                        <img src="rise.jpeg" alt="A Colorful Story of Methane's Rise" />
+                    </div>
+                    
+                    <h3>Methane Measurement</h3>
+                    <p>The measurement of methane levels in the atmosphere is conducted using a variety of advanced sensors and sophisticated data collection techniques. These measurements are crucial for identifying the specific sources of methane emissions, which may include landfills, agricultural practices such as rice cultivation, and leaks from oil and gas operations. By understanding the sources and patterns of methane emissions, researchers can develop targeted interventions to reduce methane output, contributing significantly to global efforts to combat climate change.</p>
+                    <div class="image-content">
+                        <img src="methen.jpeg" alt="Methane Measurement" />
+                    </div>
+    
+                    <h3>Carbon Dioxide Measurement</h3>
+                    <p>Carbon dioxide (CO₂) is another significant greenhouse gas, contributing to climate change through its role in the greenhouse effect. Continuous monitoring of CO₂ levels is essential for understanding the dynamics of our climate. This measurement involves using ground-based monitoring stations, satellite observations, and advanced modeling techniques to track emissions from various sources, including fossil fuel combustion, deforestation, and changes in land use. By keeping a close watch on CO₂ levels, we can better understand the overall health of our atmosphere and implement necessary changes to mitigate emissions.</p>
+                    <div class="image-content">
+                        <img src="co2.jpeg" alt="Carbon Dioxide Measurement" />
+                    </div>
+    
+                    <h3>Data Sources</h3>
+                    <p>The data for this project is gathered from multiple reputable sources to ensure accuracy and comprehensiveness. These sources include:</p>
+                    <ul>
+                        <li><strong>NOAA Monitoring Stations:</strong> A vast network of continuous monitoring stations that measure atmospheric gases across different regions, providing valuable real-time data.</li>
+                        <li><strong>Satellite Observations:</strong> Cutting-edge remote sensing technology that allows us to visualize and analyze greenhouse gas concentrations over wide areas, helping to identify trends and anomalies.</li>
+                        <li><strong>Local Environmental Agencies:</strong> Collaborations with local agencies provide specific regional data related to emissions and air quality, contributing to a more detailed understanding of local impacts.</li>
+                    </ul>
+                    <div class="image-content">
+                        <img src="ds.jpeg" alt="Data Sources" />
+                    </div>
+    
+                    <h3>NOAA's Role in Climate Monitoring</h3>
+                    <p>The National Oceanic and Atmospheric Administration (NOAA) plays a vital role in climate monitoring and research. Through its extensive network of monitoring stations and satellites, NOAA provides comprehensive data on atmospheric conditions, including greenhouse gas concentrations. This information is crucial for developing effective climate policies and for educating the public about the importance of reducing greenhouse gas emissions. NOAA's commitment to transparency and collaboration ensures that data is accessible to researchers, policymakers, and the public, fostering a shared understanding of climate challenges and solutions.</p>
+                    <div class="image-content">
+                        <img src="noaa.jpeg" alt="NOAA's Role in Climate Monitoring" />
+                    </div>
+    
+                    <h3>Key Points</h3>
+                    <p>Several key points emerge from this project:</p>
+                    <ul>
+                        <li>Understanding the sources and impacts of greenhouse gases is critical for climate action, as it allows communities to make informed decisions.</li>
+                        <li>Advanced monitoring techniques, including satellite technology and ground stations, provide accurate data that is essential for effective policymaking.</li>
+                        <li>Collaboration with agencies like NOAA enhances data reliability and accessibility, promoting a comprehensive approach to climate monitoring.</li>
+                    </ul>
+    
+                    <h3>Advantages of Monitoring Greenhouse Gases</h3>
+                    <p>Monitoring greenhouse gases offers numerous advantages, including:</p>
+                    <ul>
+                        <li>Identifying pollution hotspots, which allows for targeted regulatory measures to reduce emissions.</li>
+                        <li>Guiding regulatory measures to minimize emissions and enhance air quality, leading to improved public health.</li>
+                        <li>Enhancing public awareness about climate change and its impacts, empowering communities to take action.</li>
+                    </ul>
+    
+                    <h3>Data Analysis</h3>
+                    <p>The data analysis techniques employed in this project include statistical modeling and machine learning algorithms, which are essential for interpreting the vast amounts of data collected. By applying these techniques, researchers can identify trends, make informed predictions about future greenhouse gas emissions, and evaluate the effectiveness of mitigation strategies. This analysis forms the backbone of the project, helping to inform both local and global climate action initiatives.</p>
+    
+                    <h3>Visualizing the Data</h3>
+                    <p>Data visualization plays a crucial role in making complex datasets more accessible and understandable. Utilizing various tools and techniques, researchers can create interactive maps, graphs, and charts that illustrate greenhouse gas trends and impacts clearly. Effective visualizations not only communicate findings to the public and policymakers but also facilitate a better understanding of the relationship between local actions and global climate change, encouraging informed decision-making and community engagement.</p>
+                    <div class="image-content">
+                        <img src="vsdata.jpeg" alt="Visualizing the Data" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <main class="container mt-4" data-aos="fade-up" data-aos-duration="1500">
+        <div class="service-cards">
+            <!-- Service cards here -->
+            <div class="card">
+                <div class="card-content">
+                    <i class="fas fa-tools fa-3x"></i>
+                    <h3>Build Projects</h3>
+                    <p>Identify local partners to work with and lead project building activities.</p>
+                </div>
+            </div>
+            <!-- Community Learning Card -->
+            <div class="card">
+                <div class="card-content">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h3>Community Learning</h3>
+                    <p>Receive dedicated support to educate and expand your community online and in-person.</p>
+                </div>
+            </div>
+            <!-- Network Growth Card -->
+            <div class="card">
+                <div class="card-content">
+                    <i class="fas fa-network-wired fa-3x"></i>
+                    <h3>Network Growth</h3>
+                    <p>Access to a global network of student leaders, professional community organizers, industry experts, and Google.</p>
+                </div>
+            </div>
+            <!-- Professional Growth Card -->
+            <div class="card">
+                <div class="card-content">
+                    <i class="fas fa-briefcase fa-3x"></i>
+                    <h3>Professional Growth</h3>
+                    <p>Access to community management training and technical knowledge. Invitations to selected Google events.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-aos="fade-up" data-aos-duration="1500">
+        <!-- Footer content here -->
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Links</h4>
+                    <a class="btn btn-link" href="#">About FUTECX</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#">Privacy Policy</a>
+                    <a class="btn btn-link" href="#">Terms & Conditions</a>
+                    <a class="btn btn-link" href="#">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>143 Future Tech Park, Thanjavur, India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9876543210</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>younginnovator2024@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://x.com/RAshwin2k?t=iTYdkOAasJn998jp7lrktw&s=09"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://g.dev/AshwinRamakrishnan"><i class="fab fa-google"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/AshwinRamakrishnan"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/ashwin-ramakrishnan-b328a6298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="AII.jpeg" alt="Project 1">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="ml.jpeg" alt="Project 2">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="ai.jpeg" alt="Project 3">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="Meeravathi.jpeg" alt="Project 4">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="king.jpeg" alt="Project 5">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="nlp.jpeg" alt="Project 6">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Stay updated with the latest from FUTECX. Subscribe to our newsletter.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">FUTECX</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="#">Home</a>
+                            <a href="#">Cookies</a>
+                            <a href="#">Help</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS JS -->
+    <script>
+        AOS.init();
+    </script>
+    <script src="app.js"></script>
+    <script type="module" src="main.js"></script>
+    </body>
+    </html>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function adjustHeaderHeight() {
+            const header = document.querySelector('header');
+            header.style.height = `${window.innerHeight}px`;
+        }
+        adjustHeaderHeight();
+        window.addEventListener('resize', adjustHeaderHeight);
+    </script>
+    <script src="app.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
